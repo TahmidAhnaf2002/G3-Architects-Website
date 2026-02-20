@@ -97,7 +97,7 @@ main > section{
 }
 
 .banner-title{
-    font-weight: 700 px;
+    font-weight: 700; /* FIX: removed invalid space before "px" (font-weight doesn't use px) */
     font-size: 4rem ;
 }
 
@@ -155,6 +155,29 @@ main > section{
 
 }
 
+#experience-badge{
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: -100px;
+    margin-top: -77px;
+}
+
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.featured-architect{
+    align-self: stretch;
+}
+
+.featured-architect img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Some facts related styles */
 .facts-container{
     display: grid;
@@ -178,7 +201,7 @@ main > section{
 
 }
 .fact-name{
-    font-size: 1.25;
+    font-size: 1.25rem; /* FIX: added missing "rem" unit */
     font-weight: 600;
     margin-top: 10px;
 
@@ -225,12 +248,17 @@ main > section{
         margin-left: 20px;
         text-align: center;
     }
+
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
 }
 
 
 /* medium sized device */
 @media screen and (min-width:576px) and (max-width: 992px){
-    .teams{
+    .teams, .features{
         flex-direction: column;
     }
 
